@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disapperaing Ninja</title>
+    <style>
+      button{
+        height: 50px;
+        width: 90px;
+        font-size: 15pt;
+        
+      }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('img').click(function(){
+                $(this).hide();
+            });
+      $("#reset").click(function(){
+        location.reload();
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <img src="GOT_CL.png" alt="GOTCL" style="width:350px;height:300px;">
+    <img src="dany.jpg" alt="dany" style="width:350px;height:300px;">
+    <img src="jonsnow.jpg" alt="jonsnow" style="width:350px;height:300px;">
+    <img src="drogo.jpg" alt="drogo" style="width:350px;height:300px;">
+    <img src="jamie.jpg" alt="jamie" style="width:350px;height:300px;">
+    <img src="sansa.jpg" alt="sansa" style="width:350px;height:300px;">
+    <img src="margery.jpg" alt="margery" style="width:350px;height:300px;">
+    <img src="whitewalker.jpg" alt="whitewalker" style="width:350px;height:300px;">
+    <button id="reset">Restore</button>
+  </body>
+</html>
