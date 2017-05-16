@@ -49,3 +49,26 @@ console.log(DanceData.additionalData.favHobbies[1]);
 console.log(DanceData.additionalData.moreDetails);
 console.log(DanceData.additionalData.moreDetails.hometown.city);
 console.log(DanceData.additionalData.moreDetails.citiesLivedIn[2]);
+
+//Accessing and Setting values in nested objects
+var programmingLanguages = {
+  java: {
+    yearCreated: 1995,
+    creator: "James Gosling"
+  },
+  javascript: {
+    yearCreated: 1995,
+    creator: "Brendon Eich"
+  }
+}
+
+  //use bracket notation where the key is the nameOfLanguage that is being passed to the function.
+function addProgrammingLanguage(nameOfLanguage, yearLanguageCreated, creatorOfLanguage) {
+  programmingLanguages[nameOfLanguage] = {
+    yearCreated: yearLanguageCreated,
+    creator: creatorOfLanguage
+  }
+}
+
+addProgrammingLanguage("ruby", 1995, "Yukihiro Matsumoto");
+console.log(programmingLanguages);
