@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    <title>jquery practice</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      alert('you are now working with jquery!');
+
+      $('p').click(function(){
+        alert('you are now leaving the page!'); //use alert to pin point where things are happening
+      })
+
+      $('p').hide();
+      $('#hide').click(function(){
+        $('p').hide();
+      });
+
+      $('#show').click(function(){
+        $('p').show(); //effects methods: they toggle the visibility property of items
+      });
+
+      $('h3').hover(function(){
+        $('h2').text('go see the Space Needle!');
+      }, function(){alert('now invoking the second function!')});
+
+      $('.append').click(function(){
+        $('.result').append('<h4>.append adds HTML!</h4>');
+      });
+    });
+
+
+    </script>
+    <!-- $ access the whole jquery library. $() selects a HTML tag -->
+  </head>
+  <body>
+    <p>This is a paragraph</p>
+
+    <p>This is also a paragraph</p>
+    <button id= 'hide'> This will hide all paragraphs!</button>
+    <button id= 'show'>Click to show all paragraphs</button>
+    <a id='mylink' href="http://www.google.com">go to Google!</a>
+    <h3>Mountain View, California</h3>
+    <h2>Seattle, Washington</h2>
+    <button class= 'append'>Click to see .append work!</button>
+    <div class= 'result'></div>
+  </body>
+</html>

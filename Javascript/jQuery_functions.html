@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <style>
+      p{
+        background-color: green;
+        width: 50px;
+        height: 50px;
+      }
+
+      h2{
+        font-size: 12pt;
+        display: inline;
+      }
+      h3{
+        background-color: red;
+        width: 50px;
+        height: 50px;
+
+      }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('p').click(function(){
+        alert('i love this show!!');
+      });
+
+      $('#hide').click(function(){
+        $('p').hide();
+          console.log('test1');
+        });
+
+
+      $('#show').click(function(){
+        $('p').show();
+      });
+
+      $('#toggle').click(function(){
+        $('p').toggle();
+      });
+
+      $('#slide_down').click(function(){
+        $('p').slideDown();
+        console.log('test2');
+      });
+
+      $('#slide_up').click(function(){
+        $('p').slideUp();
+        console.log('test3');
+      });
+
+      $('#slide_toggle').click(function(){
+        $('p').slideToggle();
+        console.log('test4');
+      });
+
+      $('#fade_in').click(function(){
+        $('p').fadeIn();
+        console.log('test5');
+      });
+
+      $('#before').click(function(){
+        $('p').before('<h3></h3>');
+        console.log('test6');
+      });
+
+      $('#attr').click(function(){
+        $('img').attr("width", "500");
+        console.log('test6');
+      });
+
+    });
+    </script>
+  </head>
+  <body>
+    <div class= 'hide1'>
+      <p></p>
+      <h2>Hide!</h2>
+      <button id= 'hide'> Hide </button>
+  </div>
+  <div class= 'show1'>
+    <h2>Show!</h2>
+    <button id= 'show'> Show </button>
+  </div>
+  <div class= 'toggle1'>
+    <h2>Toggle!</h2>
+    <button id= 'toggle'> Toggle </button>
+  </div>
+  <div class= 'slide_down1'>
+    <h2>SlideDown!</h2>
+    <button id= 'slide_down'> Slide_Down </button>
+  </div>
+  <div class= 'slide_up1'>
+    <h2>SlideUp!</h2>
+    <button id= 'slide_up'> Slide_Up </button>
+  </div>
+  <div class= 'slide_toggle1'>
+    <h2>SlideToggle!</h2>
+    <button id= 'slide_toggle'> Slide_Toggle </button>
+  </div>
+  <div class= 'fade_in1'>
+    <h2>FadeIn!</h2>
+    <button id= 'fade_in'> Fade_In </button>
+  </div>
+  <div class= 'before1'>
+    <h2>Before!</h2>
+    <button id= 'before'> Before </button>
+    <h3></h3>
+  </div>
+  <div class= 'attr1'>
+    <h2>Attr!</h2>
+    <img src="GOT_CL.png" alt="GOTCL" style="width:100px;height:100px;">
+    <button id= 'attr'> Attr! </button>
+  </div>
+  </body>
+</html>
