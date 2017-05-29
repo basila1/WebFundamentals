@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment: Pokemon</title>
+    <style>
+      #pokemon_screen{
+        display: inline-block;
+        width: 900px;
+      }
+      #pokedex{
+        display: inline-block;
+        background-color: red;
+        height: 600px;
+        width: 300px;
+        float: right;
+        position: fixed;
+        /*position: relative;
+        bottom: 700px;*/
+      }
+      #screen{
+        background-color: white;
+        height: 500px;
+        width: 200px;
+        margin: 50px;
+        padding-left: 30px;
+      }
+      p{
+        font-size: 20pt;
+        font-weight: bold;
+      }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      for (var i = 1; i < 152; i++) {
+        var link = "http://pokeapi.co/media/img/";
+      $('#pokemon_screen').append("<img id='" + i + "' class='ind_poke' src=" + link + i + ".png>");
+      // console.log("tests")
+      //'ind_poke'= click on an individual pokemon (part of the loop), give each pokemon an id.
+    }
+
+      $('.ind_poke').click(function(){
+        var id = this.id
+        $.get('http://pokeapi.co/api/v1/pokemon/' + id, function(res){
+          console.log(res);
+          var html_str= "";
+          
+          html_str += "<p>" + res['name'] + "</p>"
+          html_str += "<img id='" + id + "' class='ind_poke' src=" + link + id + ".png>";
+          html_str += "<h4>Types</h4>"
+          html_str += "<ul>";
+          for (var b = 0; b < res['types'].length; b++) {
+            html_str += "<li>" + res['types'][b]['name'] + "</li>";
+          }
+          html_str += "</ul>";
+          html_str += "<h4>Height</h4>";
+          html_str += res['height'];
+          html_str += "<h4>Weight</h4>";
+          html_str += res['weight'];
+          $('#screen').html(html_str)
+        });
+      });
+  });
+    </script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="pokemon_screen"></div>
+      <div id="pokedex">
+        <!-- <h1>content</h1> -->
+        <div id="screen"></div>
+      </div>
+    </div>
+  </body>
+</html>
