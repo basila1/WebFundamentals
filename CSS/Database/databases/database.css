@@ -1,0 +1,231 @@
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.header{
+  display: block;
+  background-color: pink;
+  width: 1000px;
+  height: 100px;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(#f1f2ef, #f6f7f5, #ffffff)
+
+}
+.database_logo img{
+  margin-left: 10px;
+}
+.learn{
+  /*background-color: blue;*/
+  width: 400px;
+  height: 40px;
+  position: relative;
+  left: 565px;
+  bottom: 55px;
+  font-size: 8pt;
+}
+
+.database_logo .learn{
+  vertical-align: top;
+}
+
+.search{
+  display: block;
+  /*background-color: yellow;*/
+  width: 996px;
+  height: 35px;
+  padding: 0px;
+  border: 2px solid black;
+  background: linear-gradient(#ffffff, #f1f2ef, #ffffff)
+
+}
+.search ul{
+  padding: 0px;
+  margin: 0px;
+  /*border-right: 1px solid black;*/
+}
+.search ul li{
+  display: inline-block;
+  width: 13%;
+  text-decoration: underline;
+  /*padding-right: 40px;
+  padding-left: 40px;*/
+  border-right: 1px solid black;
+  /*margin-top: 20px;*/
+  height: 35px;
+  /*bottom: 5px;*/
+  text-align: center;
+  position: relative;
+  top: 0px;
+  color: #5c34f0;
+  line-height: 45px;
+}
+
+.main{
+  display: block;
+  background-color: green;
+  width: 960px;
+  height: 700px;
+  padding: 20px;
+  background: radial-gradient(#6e5965, #565073, #1d0d13 )
+}
+
+/*.main_content{
+  width:1000px;
+  height: 200px;
+  background-color: silver;
+  padding: 0px;*/
+  /*margin: 0px 0px 5px 5px;*/
+
+}
+/*.data_des{
+  background: linear-gradient(to right, #f1fbfd, #e7e6ed, #dccbd8);
+}*/
+.main_boxes{
+  width: 1000px;
+  height:500px;
+  background-color: purple;
+}
+.database_pic{
+  width: 450px;
+  height: 280px;
+  display: inline-block;
+}
+/*.database_pic .what_database{
+  vertical-align: top;
+}*/
+.what_database{
+  width: 420px;
+  height: 295px;
+  background-color: #3e344b;
+  display: inline-block;
+  position: relative;
+  bottom: 62px;
+  left: 80px;
+  /*vertical-align: top;*/
+}
+.What_are_databases{
+  width: 420px;
+  height: 45px;
+  background-color: blue;
+  margin-top: 0px;
+  position: relative;
+  bottom: 12px;
+  font-size: 10pt;
+  background: linear-gradient(#c0c0c0, #8b8995, #c0c0c0)
+}
+.What_are_databases h2{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.structured{
+  width: 420px;
+  height: 40px;
+  background-color: white;
+  margin: 0px;
+  position: relative;
+  bottom: 28px;
+  /*font-size: 8pt;*/
+  background: linear-gradient(to right, #f1fbfd, #dccbd8);
+}
+.structured p{
+  padding: 10px;
+  font-weight: bold;
+}
+.data_des{
+  width: 420px;
+  height: 210px;
+  background-color: gold;
+  margin: 0px;
+  position: relative;
+  bottom: 45px;
+  background: linear-gradient(to right, #f1fbfd, #dccbd8);
+}
+.data_des p{
+  padding-left: 10px;
+}
+.storage{
+  width: 235px;
+  height: 380px;
+  /*background-color: orange;*/
+  display: inline-block;
+  padding: 0px;
+  margin-top: 25px;
+}
+.stitle{
+  width: 235px;
+  height: 40px;
+  background-color: brown;
+  position: relative;
+  bottom: 20px;
+}
+.stitle h2{
+  padding-top: 5px;
+  padding-left: 5px;
+}
+.searching{
+  width: 235px;
+  height: 380px;
+  /*background-color: orange;*/
+  display: inline-block;
+  padding: 0px;
+
+}
+.interaction{
+  width: 235px;
+  height: 380px;
+  /*background-color: orange;*/
+  display: inline-block;
+  padding: 0px;
+
+}
+.companies{
+  width: 235px;
+  height: 380px;
+  /*background-color: orange;*/
+  display: inline-block;
+  padding: 0px;
+
+}
+.storage, .searching, .interaction, .companies{
+  position: relative;
+  bottom: 55px;
+}
+.storage, .searching, .interaction, .companies{
+  background: linear-gradient(#97a6bf, #98a8c0, #bdc6d6, #dbe1e9, #ffffff);
+}
+.stitle, .stitle, .stitle, .stitle{
+  background: linear-gradient(#c0c0c0, #8b8995, #c0c0c0)
+
+}
+.spic{
+  position: relative;
+  bottom: 20px;
+}
+.sdes{
+  position: relative;
+  bottom: 30px;
+}
+.sdes p{
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.main_boxes{
+  vertical-align: top;
+}
+.storage button, .searching button, .interaction button, .companies button{
+  float: right;
+  margin-right: 20px;
+  border: 3px solid black;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #51668c;
+  color: white;
+  font-weight: bold;
+}
+
+.database_pic img{
+  border:7px solid #c0c0c0;
+}
