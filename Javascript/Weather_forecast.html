@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <style>
+      #weather_search{
+        display: block;
+        /*background-color: blue;*/
+        height: 50px;
+        padding: 20px;
+      }
+      #weather_display{
+        display: block;
+        /*background-color: red;*/
+        height: 400px;
+        /*padding: 20px;*/
+      }
+      .city_1{
+        height: 30px;
+        width: 200px;
+      }
+      .submit_1{
+        height: 40px;
+        width: 150px;
+      }
+
+      h1, h4{
+        padding-left: 20px;
+      }
+
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('form').submit(function() {
+          console.log('test1');
+      // your code here (build up your url)
+          var city= $('input:text[name=city]').val();
+          console.log(city);
+          var api_key= 'edb6d90b7856b1c46350ca266b39d169';
+        $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + ',&&appid=' + api_key, function(res) {
+          console.log(res);
+          // your code here
+          var html_str="";
+          html_str += "<h1>" + res['name'] + "</h1>";
+          html_str += "<h4>" + "Temperature: " + res['main']['temp'] + "</h4>";
+          $('#weather_display').html(html_str);
+      }, 'json');
+      // don't forget to return false so the page doesn't refresh
+      return false;
+  });
+});
+
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="weather_search">
+        <form id="search_bar">
+          <input class="city_1" name="city" type="text" placeholder="City">
+          <input class="submit_1" name="submit" type="submit" value="Search Weather">
+        </form>
+      </div>
+      <div id="weather_display"></div>
+    </div>
+  </body>
+</html>

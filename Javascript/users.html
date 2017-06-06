@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <style>
+      .submit_btn{
+
+      }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('form').on('submit', function () {
+        var newsubject= $('form').find('input[type="text"]').val();
+        var lasttname = $('form input.last_name').val();
+        $('table').append('<tr><td>' + newsubject + '</td></tr>')
+        $('table').append('<tr><td>' + lastname + '</td></tr>')
+
+        return false;
+      });
+
+    });
+
+    </script>
+  </head>
+  <body>
+    <table style="width:70%" frame= "box">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact#</th>
+      </tr>
+    </table>
+    <div class="AddUser">
+      <h1>Add User</h1>
+      <form id="users" action="action_page.php" method="get">
+        First Name: <input class="first_name" type="text" name="firstname"><br>
+        Last Name: <input class="last_name" type="text" name="lastname"><br>
+        Email Address: <input class="email_id" type="email" name="email"><br>
+        Contact No.: <input class="ph_number" type="tel" name="usrtel"><br>
+        <input class="submit_btn" type="submit" value="Add User">
+      </form>
+    </div>
+  </body>
+</html>
